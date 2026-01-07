@@ -10,6 +10,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     
     steps:
     - name: Checkout code
@@ -44,4 +46,3 @@ jobs:
         name: app-release
         path: app/build/outputs/apk/release/*.apk
         if-no-files-found: error
-
