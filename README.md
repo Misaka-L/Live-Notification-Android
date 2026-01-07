@@ -31,9 +31,34 @@
 <pre><code>compileSDK: 36
 targetSDK: 36
 minSDK: 28
-gradle: 8.10.1
+gradle: 8.14.2
+agp: 8.5.0
 kotlin: 2.1.21
 </code></pre>
+
+<h2>🔨 Building APK Files</h2>
+
+<h3>Using GitHub Actions (Recommended)</h3>
+<p>The project includes a GitHub Actions workflow that automatically builds APK files on push to main branch or pull requests. The built APK files are available as downloadable artifacts in the Actions tab.</p>
+
+<h3>Building Locally</h3>
+<p>To build the APK files locally, ensure you have:</p>
+<ul>
+  <li>JDK 17 or higher</li>
+  <li>Android SDK with API level 36 installed</li>
+</ul>
+
+<p><strong>Build debug APK:</strong></p>
+<pre><code>./gradlew assembleDebug</code></pre>
+
+<p><strong>Build release APK:</strong></p>
+<pre><code>./gradlew assembleRelease</code></pre>
+
+<p>The built APK files will be located in:</p>
+<ul>
+  <li>Debug: <code>app/build/outputs/apk/debug/app-debug.apk</code></li>
+  <li>Release: <code>app/build/outputs/apk/release/app-release-unsigned.apk</code></li>
+</ul>
 
 >[!NOTE]
 > Medium Article
